@@ -1,8 +1,17 @@
-const inputIcon = document.querySelector(".input__icon");
-const inputPassword = document.querySelector(".input__field");
-
-inputIcon.addEventListener("click", () => {
-  inputIcon.classList.toggle("ri-eye-off-line");
-  inputIcon.classList.toggle("ri-eye-line");
-  inputPassword.type = inputPassword.type === "Senha" ? "text" : "Senha";
-});
+const loginText = document.querySelector(".title-text .login");
+const loginForm = document.querySelector("form.login");
+const loginBtn = document.querySelector("label.login");
+const signupBtn = document.querySelector("label.signup");
+const signupLink = document.querySelector("form .signup-link a");
+signupBtn.onclick = () => {
+  loginForm.style.marginLeft = "-50%";
+  loginText.style.marginLeft = "-50%";
+};
+loginBtn.onclick = () => {
+  loginForm.style.marginLeft = "0%";
+  loginText.style.marginLeft = "0%";
+};
+signupLink.onclick = () => {
+  signupBtn.click();
+  return false;
+};
