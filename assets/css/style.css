@@ -442,8 +442,23 @@ body.dark .home .text {
   }
 }
 
-@media only screen and (max-width: 992px) {
+
+/* Smartphones  */
+@media only screen and (max-width: 600px) {
 }
 
-@media only screen and (max-width: 768px) {
+/* Dispositivos um pouco maiores*/
+@media only screen and (min-width: 600px) {
+}
+
+/*Dispostivos Médios*/
+@media only screen and (min-width: 768px) {
+}
+
+/* Dispostivos Largos */
+@media only screen and (min-width: 992px) {
+}
+
+/* Super Largos*/
+@media only screen and (min-width: 1200px) {
 }
