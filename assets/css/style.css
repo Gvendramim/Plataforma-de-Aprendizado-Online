@@ -7,12 +7,12 @@
 
 :root {
   /* ===== Colors ===== */
-  --body-color: #e4e9f7;
+  --body-color: #ececec;
   --sidebar-color: #fff;
-  --primary-color: #1421dc;
+  --primary-color: #6b14dc;
   --primary-color-light: #f6f5ff;
   --toggle-color: #ddd;
-  --text-color: #707070;
+  --text-color: #363636;
 
   /* ====== Transition ====== */
   --tran-03: all 0.2s ease;
@@ -79,7 +79,7 @@ body.dark {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .sidebar .text,
@@ -363,6 +363,10 @@ body.dark .home .text {
               inset -1px -1px 2px rgba(255, 255, 255, .4);
 }
 
+.content {
+  font-size: 17px;
+}
+
 .container .card .circle {
   position: relative;
   width: 100%;
@@ -375,7 +379,7 @@ body.dark .home .text {
 
 .container .card h2 {
   color: #fff;
-  font-size: 4.5em;
+  font-size: 30px;
   padding: 30px 0;
 }
 
@@ -461,4 +465,16 @@ body.dark .home .text {
 
 /* Super Largos*/
 @media only screen and (min-width: 1200px) {
+}
+
+.history {
+  width: 100%;
+  padding: 30px 200px 0 200px;
+  align-items: center;
+}
+
+h1 {
+  font-size: 40px;
+  text-align: center;
+  padding: 30px;
 }
