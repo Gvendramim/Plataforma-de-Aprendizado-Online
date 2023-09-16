@@ -9,7 +9,7 @@
   /* ===== Colors ===== */
   --body-color: #e9e9e9;
   --sidebar-color: #fff;
-  --primary-color: #6b14dc;
+  --primary-color: #000131;
   --primary-color-light: #f6f5ff;
   --toggle-color: #ddd;
   --text-color: #363636;
@@ -349,7 +349,7 @@ body.dark .home .text {
 .container {
   position: relative;
   width: 1300px;
-  padding: 0px;
+  padding: 100px 0 0 190px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -369,7 +369,6 @@ body.dark .home .text {
 }
 
 .container:hover .card {
-  /* filter: blur(5px); */
   transform: scale(.9);
   opacity: .5;
 }
@@ -459,20 +458,6 @@ body.dark .home .text {
   background: #bb02ff;
 }
 
-.container .card:nth-child(4) .circle,
-.container .card:nth-child(4) .content a {
-  background: #3002ff;
-}
-
-.container .card:nth-child(5) .circle,
-.container .card:nth-child(5) .content a {
-  background: #000000;
-}
-
-.container .card:nth-child(6) .circle,
-.container .card:nth-child(6) .content a {
-  background: #89ff02;
-}
 
 @keyframes colorChange {
   0% {
@@ -513,8 +498,8 @@ body.dark .home .text {
 @media only screen and (min-width: 1200px) {
 }
 
-/* Quem somos */
 
+/* Quem somos */
 h2 {
   font-size: 40px;
   text-align: center;
@@ -567,8 +552,8 @@ h2 {
   }
 }
 
-/* Contato */
 
+/* Contato */
 .div-contact {
   max-width: 600px;
   margin: 50px auto;
