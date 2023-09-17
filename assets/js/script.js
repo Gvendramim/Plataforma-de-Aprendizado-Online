@@ -22,3 +22,29 @@ modeSwitch.addEventListener("click", () => {
     modeText.innerText = "Modo Escuro";
   }
 });
+
+
+// Cursos
+
+document.addEventListener('DOMContentLoaded', function() {
+  const carousel = document.querySelector('.carousel');
+  const videos = document.querySelectorAll('.video');
+  let currentIndex = 1;
+
+  function updateCarousel() {
+      const offset = currentIndex * -320; 
+      carousel.style.transform = `translateX(${offset}px)`;
+      videos.forEach(video => video.classList.remove('active'));
+      videos[currentIndex].classList.add('active');
+  }
+
+  document.querySelector('.left-arrow').addEventListener('click', function() {
+      currentIndex = Math.max(currentIndex - 1, 0);
+      updateCarousel();
+  });
+
+  document.querySelector('.right-arrow').addEventListener('click', function() {
+      currentIndex = Math.min(currentIndex + 1, videos.length - 1);
+      updateCarousel();
+  });
+});
