@@ -586,8 +586,25 @@ h2 {
   }
 }
 
+/* Cursos */
 
-/* cursos */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+  width: 1400px;
+}
+
+.video {
+  margin: 10px;
+  text-align: center;
+}
+
+iframe {
+  max-width: 100%;
+  border: none;
+}
 
 /* Footer */
 
