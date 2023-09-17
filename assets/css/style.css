@@ -478,7 +478,7 @@ h2 {
   justify-content: space-around;
   align-items: center;
   background-color: #e9e9e9;
-  padding: 50px;
+  padding: 40px;
 }
 
 .empresa-texto1 {
@@ -588,49 +588,6 @@ h2 {
 
 
 /* cursos */
-.carousel-container {
-  display: flex;
-  align-items: center;
-}
-
-.carousel {
-  display: flex;
-  overflow-x: hidden;
-}
-
-.video {
-  flex: 0 0 300px;
-  margin: 0 10px;
-  transition: transform 0.5s;
-}
-
-iframe {
-  width: 100%;
-  height: 500px; 
-  border: none;
-}
-
-.arrow {
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-
-.left-arrow {
-  transform: rotate(180deg);
-}
-
-.right-arrow {
-  transform: none;
-}
-
-@media (max-width: 768px) {
-  .video {
-      flex: 0 0 200px;
-  }
-}
 
 /* Footer */
 
