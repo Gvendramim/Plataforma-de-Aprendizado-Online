@@ -6,6 +6,7 @@
   <link rel="icon" type="image/x-icon" href="/assets/images/pesquisa.png">
   <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Slick.js -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
@@ -25,52 +26,154 @@
   </ul>
 </header>
 
-<section>
+<section class="section1">
     <img src="assets/images/Banner/3.png" id="stars">
+</section class="section1">
+
+<!-- 1 -->
+<section id="two" class="main style3">
+  <div class="container2">
+    <div class="row gtr-150">
+      <div class="col-6 col-12-medium">
+        <ul class="major-icons">
+          <li><span class="icon solid style1 major fa-code"></span></li>
+          <li><span class="icon solid style2 major fa-bolt"></span></li>
+          <li><span class="icon solid style3 major fa-camera-retro"></span></li>
+          <li><span class="icon solid style4 major fa-cog"></span></li>
+          <li><span class="icon solid style5 major fa-desktop"></span></li>
+          <li><span class="icon solid style6 major fa-calendar"></span></li>
+        </ul>
+      </div>
+      <div class="col-6 col-12-medium">
+        <div class="div-contact">
+          <h1 style="text-align: center; padding: 5px 0 50px 0;" >Entre em Contato</h1>
+          <form class="form-contact">
+              <label class="entry-label" for="name">Nome Completo</label>
+              <input class="entry" type="text" required>
+        
+              <label class="entry-label" for="email">Email</label>
+              <input class="entry" type="email" required>
+        
+              <label class="entry-label" for="phone">Telefone</label>
+              <input class="entry" type="tel" required>
+        
+              <label class="entry-label" for="message">Deixe aqui sua mensagem</label>
+              <textarea class="entry" cols="30" rows="5"></textarea>
+        
+              <div class="div-entry">
+                  <p class="entry-label"> Como prefere nosso contato?</p>
+                  <label class="entry-label" for="email-choice"><input type="radio" name="contact-choice"
+                          id="email-choice">Email</label>
+        
+                  <label class="entry-label" for="phone-choice"><input type="radio" name="contact-choice"
+                          id="phone-choice">Telefone</label>
+        
+                  <label class="entry-label" for="whatsapp-choice" lang="en"><input type="radio" name="contact-choice"
+                          id="whatsapp-choice">Whatsapp</label>
+              </div>
+              <label class="entry-label" for="day-period">Em qual horário prefere ser atendido?</label>
+              <select class="entry" name="day-period" id="">
+                  <option value="none">-- Selecione aqui --</option>
+                  <option value="morning">Manhã</option>
+                  <option value="afternoon">Tarde</option>
+                  <option value="evening">Noite</option>
+              </select>
+        
+              <label for="check-mailing" class="entry-label" id="checkbox">Gostaria de receber nossas novidades por email?
+                  <input type="checkbox" name="" id="check-mailing"></label>
+        
+              <input class="submit-btn" type="submit" value="Enviar">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<!-- HOME -->
+<footer>
+  <div id="footer_content">
+      <div id="footer_contacts">
+          <h1>Logo</h1>
+          <p>Vamos juntos nessa jornada!</p>
 
-<div class="div-contact">
-  <form class="form-contact">
-      <label class="entry-label" for="name">Nome Completo</label>
-      <input class="entry" type="text" required>
+          <div id="footer_social_media">
+              <a href="https://www.instagram.com" class="footer-link" id="instagram">
+                  <i class="fa-brands fa-instagram"></i>
+              </a>
 
-      <label class="entry-label" for="email">Email</label>
-      <input class="entry" type="email" required>
+              <a href="https://www.facebook.com" class="footer-link" id="facebook">
+                  <i class="fa-brands fa-facebook-f"></i>
+              </a>
 
-      <label class="entry-label" for="phone">Telefone</label>
-      <input class="entry" type="tel" required>
-
-      <label class="entry-label" for="message">Deixe aqui sua mensagem</label>
-      <textarea class="entry" cols="30" rows="5"></textarea>
-
-      <div class="div-entry">
-          <p class="entry-label"> Como prefere nosso contato?</p>
-          <label class="entry-label" for="email-choice"><input type="radio" name="contact-choice"
-                  id="email-choice">Email</label>
-
-          <label class="entry-label" for="phone-choice"><input type="radio" name="contact-choice"
-                  id="phone-choice">Telefone</label>
-
-          <label class="entry-label" for="whatsapp-choice" lang="en"><input type="radio" name="contact-choice"
-                  id="whatsapp-choice">Whatsapp</label>
+              <a href="https://www.whatsapp.com/?lang=pt_BR" class="footer-link" id="whatsapp">
+                  <i class="fa-brands fa-whatsapp"></i>
+              </a>
+          </div>
       </div>
-      <label class="entry-label" for="day-period">Em qual horário prefere ser atendido?</label>
-      <select class="entry" name="day-period" id="">
-          <option value="none">-- Selecione aqui --</option>
-          <option value="morning">Manhã</option>
-          <option value="afternoon">Tarde</option>
-          <option value="evening">Noite</option>
-      </select>
+      
+      <ul class="footer-list">
+          <li>
+              <h3>Links</h3>
+          </li>
+          <li>
+              <a href="index.html" class="footer-link">Inicio</a>
+          </li>
+          <li>
+              <a href="quem-somos.html" class="footer-link">Quem somos</a>
+          </li>
+          <li>
+              <a href="contato.html" class="footer-link">Contato</a>
+          </li>
+      </ul>
 
-      <label for="check-mailing" class="entry-label" id="checkbox">Gostaria de receber nossas novidades por email?
-          <input type="checkbox" name="" id="check-mailing"></label>
+      <ul class="footer-list">
+          <li>  
+              <h3>Cursos</h3>
+          </li>
+          <li>
+              <a href="cursos.html" class="footer-link">Front-End</a>
+          </li>
+          <li>
+              <a href="cursos.html" class="footer-link">Back-End</a>
+          </li>
+          <li>
+              <a href="cursos.html" class="footer-link">Banco de Dados</a>
+          </li>
+      </ul>
 
-      <input class="submit-btn" type="submit" value="Enviar">
-  </form>
-</div>
+      <div id="footer_subscribe">
+          <h3>Inscreva-se</h3>
 
-<script src="/assets/js/script.js"></script>
+          <p>
+            Digite seu e-mail para ser notificado sobre
+            nossas soluções de notícias!
+          </p>
+
+          <div id="input_group">
+              <input type="email" id="email">
+              <button>
+                  <i class="fa-regular fa-envelope"></i>
+              </button>
+          </div>
+      </div>
+  </div>
+
+  <div id="footer_copyright">
+      &#169
+      2023 todos os direitos reservados
+  </div>
+</footer>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/script.js"></script>
+
 </body>
 </html>
