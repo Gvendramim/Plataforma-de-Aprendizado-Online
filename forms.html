@@ -26,21 +26,22 @@
         <div class="slider-tab"></div>
       </div>
       <div class="form-inner">
-        <form action="login.php" class="login">
+        <form action="login.php" method="post" class="login">
           <div class="field">
-            <input type="text" placeholder="Email" required>
+            <input type="text" name="email" placeholder="Email" required>
           </div>
           <div class="field">
-            <input type="password" placeholder="Senha" required id="YourPassword">
+            <input type="password" name="senha" placeholder="Senha" required id="YourPassword">
             <!-- <div class="show"></div> -->
           </div>
           <div class="pass-link"><a href="#">Esqueceu sua Senha ?</a></div>
           <div class="field btn">
             <div class="btn-layer"></div>
-            <input type="submit" value="Entrar">
+            <input type="submit" name="submit" value="Entrar">
           </div>
           <div class="signup-link">Não é um membro? <a href="#">Inscrever-se</a></div>
         </form>
+        
         <form action="login.php" class="signup">
           <div class="field">
             <input type="text" placeholder="Email" required>
