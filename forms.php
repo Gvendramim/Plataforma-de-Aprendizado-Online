@@ -133,7 +133,7 @@
                   <label for="outro">Outro</label>
               </div>
 
-              <label class="entry-label" for="day-period">Como conheceu a gente?</label>
+              <label class="entry-label" for="day-period">Como encontrou a gente?</label>
               <select class="entry" name="conheceu" id="conheceu">
                   <option value="none" name="conheceu" id="conheceu">-- Selecione aqui --</option>
                   <option value="Facebook" name="conheceu" id="conheceu">Facebook</option>
