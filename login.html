@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR" >
+<head>
+  <meta charset="UTF-8">
+  <title>Cadrasto</title>
+  <link rel="icon" type="image/x-icon" href="/assets/images/pesquisa.png">
+  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap'>
+  <link rel="stylesheet" href="/assets/css/forms.css">
+</head>
+
+
+<body>
+  
+  <div class="wrapper">
+    <div class="title-text">
+      <div class="title login">Entrar</div>
+      <div class="title signup">Inscrever-se</div>
+    </div>
+    <div class="form-container">
+      <div class="slide-controls">
+        <input type="radio" name="slide" id="login" checked>
+        <input type="radio" name="slide" id="signup">
+        <label for="login" class="slide login">Entrar</label>
+        <label for="signup" class="slide signup">Inscrever-se</label>
+        <div class="slider-tab"></div>
+      </div>
+      <div class="form-inner">
+        <form action="login.php" method="post" class="login">
+          <div class="field">
+            <input type="text" name="email" placeholder="Email" required>
+          </div>
+          <div class="field">
+            <input type="password" name="senha" placeholder="Senha" required id="YourPassword">
+            <!-- <div class="show"></div> -->
+          </div>
+          <div class="pass-link"><a href="#">Esqueceu sua Senha ?</a></div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" name="submit" value="Entrar">
+          </div>
+          <div class="signup-link">Não é um membro? <a href="#">Inscrever-se</a></div>
+        </form>
+        
+        <form action="login.php" class="signup">
+          <div class="field">
+            <input type="text" placeholder="Email" required>
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Senha" required>
+          </div>
+          <div class="field">
+            <input type="password" placeholder="Confirmar Senha" required>
+          </div>
+          <div class="field btn">
+            <div class="btn-layer"></div>
+            <input type="submit" value="Inscrever-se">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'></script>
+  <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'></script>
+  <script src="/assets/js/forms.js"></script>
+</body>
+</html>
