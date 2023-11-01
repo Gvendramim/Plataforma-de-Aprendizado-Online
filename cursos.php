@@ -1,3 +1,25 @@
+<?php
+    session_start();
+    include_once('config.php');
+    if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true))
+    {
+        unset($_SESSION['email']);
+        unset($_SESSION['senha']);
+        header('Location: login.php');
+    }
+    $logado = $_SESSION['email'];
+    if(!empty($_GET['search']))
+    {
+        $data = $_GET['search'];
+        $sql = "SELECT * FROM user WHERE id LIKE '%$data%' or nome LIKE '%$data%' or email LIKE '%$data%' ORDER BY id DESC";
+    }
+    else
+    {
+        $sql = "SELECT * FROM user ORDER BY id DESC";
+    }
+    $result = $conexao->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR" >
 <head>
@@ -20,8 +42,10 @@
         <img src="images/pesquisa.png" alt="Gabriel">
       </span>
       <div class="text logo-text">
-        <span class="name">Gabriel</span>
-        <span class="profession">Desenvolvedor</span>
+      <?php
+        echo "<span<u>$logado</u></span>";
+      ?>
+        <span class="profession">I learn</span>
       </div>
     </div>
     <i class='bx bx-chevron-right toggle'></i>
@@ -41,7 +65,7 @@
         </li>
         <li class="nav-link">
           <a href="quem-somos.html">
-            <i class='bx bx-bar-chart-alt-2 icon'></i>
+            <i class='bx bx-group icon'></i>
             <span class="text nav-text">Quem somos</span>
           </a>
         </li>
@@ -58,7 +82,7 @@
             <span class="text nav-text">Forum</span>
           </a>
         </li> -->
-        
+
         <li class="nav-link">
           <a href="contato.html">
             <i class='bx bx-info-circle icon'></i>
@@ -69,7 +93,7 @@
     </div>
     <div class="bottom-content">
       <li class="">
-        <a href="forms.php">
+        <a href="sair.php">
           <i class='bx bx-log-out icon'></i>
           <span class="text nav-text">Sair</span>
         </a>
@@ -91,34 +115,36 @@
 </nav>
 
 <!-- HOME -->
-<main>
-  <div class="video">
-      <iframe width="560" height="315" src="https://www.youtube.com/watch?v=Ejkb_YpuHWs&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n" frameborder="0" allowfullscreen></iframe>
-      <h4>Curso de Banco de Dados</h4>
-  </div>
-  <div class="video">
-      <iframe width="560" height="315" src="https://www.youtube.com/watch?v=jgQjeqGRdgA&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=3" frameborder="0" allowfullscreen></iframe>
-      <h4>Curso de Banco de Dados</h4>
-  </div>
-  <div class="video">
-      <iframe width="560" height="315" src="https://www.youtube.com/watch?v=B4FU3NFRTDw&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=10" frameborder="0" allowfullscreen></iframe>
-      <h4>Curso de Banco de Dados</h4>
-  </div>
-  <div class="video">
-      <iframe width="560" height="315" src="https://www.youtube.com/watch?v=iSqf2iPqJNM&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=11" frameborder="0" allowfullscreen></iframe>
-      <h4>Curso de Banco de Dados/h4>
-  </div>
-  <div class="video">
-      <iframe width="560" height="315" src="https://www.youtube.com/watch?v=bDULqeGEvAw&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=16" frameborder="0" allowfullscreen></iframe>
-      <h4>Curso de Banco de Dados/h4>
-  </div>
-  <div class="video">
-      <iframe width="560" height="315" src="https://www.youtube.com/watch?v=xg-vHgLF0mI&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=17" frameborder="0" allowfullscreen></iframe>
-      <h4>Curso de Banco de Dados/h4>
-  </div>
-</main>
-
-
+<section>
+  <div class="container">
+    <div class="card">
+        <div class="circle">
+            <h2>Front-End</h2>
+        </div>
+        <div class="content">
+            <p>Descubra o mundo do desenvolvimento Front-end e dê vida às suas ideias online e aprimore seus conhecimentos!</p>
+            <a href="front.html">Saiba mais</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="circle">
+            <h2>Back-End</h2>
+        </div>
+        <div class="content">
+            <p>Explore o fascinante universo do desenvolvimento Back-end e construa bases sólidas para sistemas robustos e eficientes! </p>
+            <a href="back.html">Saiba mais</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="circle">
+            <h2>Banco de Dados</h2>
+        </div>
+        <div class="content">
+            <p>Desvende os segredos do mundo dos bancos de dados e domine a gestão de informações de forma eficiente e segura!</p>
+            <a href="banco.html">Saiba mais</a>
+        </div>
+    </div>
+</section>
 
 <script src="js/script.js"></script>
 </body>
