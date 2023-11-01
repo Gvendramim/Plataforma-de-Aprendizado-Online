@@ -16,6 +16,7 @@
         $result = mysqli_query($conexao, "INSERT INTO user(nome,senha,email,telefone,data_nascimento,genero,conheceu,novidades) 
         VALUES ('$nome','$senha','$email','$telefone','$data_nascimento','$genero','$conheceu','$novidades')");
 
+        header('Location: login.php');
     }
 
 ?>
@@ -25,7 +26,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Plataforma de Aprendizado Online</title>
-  <link rel="icon" type="image/x-icon" href="/assets/images/pesquisa.png">
+  <link rel="icon" type="image/x-icon" href="images/pesquisa.png">
   <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap'>
   <style>
@@ -144,7 +145,7 @@
               <label for="check-mailing" class="entry-label" id="checkbox">Gostaria de receber nossas novidades por email?
                   <input type="checkbox" name="novidades" id="novidades"></label>
         
-              <input class="submit-btn" type="submit" name="submit" id="submit" value="Enviar">
+              <input class="submit-btn" type="submit" name="submit" id="submit" value="Cadrastrar">
           </form>
         </div>
 </body>
