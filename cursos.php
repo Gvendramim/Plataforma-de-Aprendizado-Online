@@ -1,12 +1,34 @@
+<?php
+    session_start();
+    include_once('config.php');
+    if((!isset($_SESSION['email']) == true) and (!isset($_SESSION['senha']) == true))
+    {
+        unset($_SESSION['email']);
+        unset($_SESSION['senha']);
+        header('Location: login.php');
+    }
+    $logado = $_SESSION['email'];
+    if(!empty($_GET['search']))
+    {
+        $data = $_GET['search'];
+        $sql = "SELECT * FROM user WHERE id LIKE '%$data%' or nome LIKE '%$data%' or email LIKE '%$data%' ORDER BY id DESC";
+    }
+    else
+    {
+        $sql = "SELECT * FROM user ORDER BY id DESC";
+    }
+    $result = $conexao->query($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR" >
 <head>
   <meta charset="UTF-8">
   <title>Plataforma de Aprendizado Online</title>
-  <link rel="icon" type="image/x-icon" href="/assets/images/pesquisa.png">
+  <link rel="icon" type="image/x-icon" href="images/pesquisa.png">
   <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css'>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap'>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -17,11 +39,13 @@
   <header>
     <div class="image-text">
       <span class="image">
-        <img src="/assets/images/pesquisa.png" alt="Gabriel">
+        <img src="images/pesquisa.png" alt="Gabriel">
       </span>
       <div class="text logo-text">
-        <span class="name">Gabriel</span>
-        <span class="profession">Desenvolvedor</span>
+      <?php
+        echo "<span<u>$logado</u></span>";
+      ?>
+        <span class="profession">I learn</span>
       </div>
     </div>
     <i class='bx bx-chevron-right toggle'></i>
@@ -69,7 +93,7 @@
     </div>
     <div class="bottom-content">
       <li class="">
-        <a href="forms.html">
+        <a href="sair.php">
           <i class='bx bx-log-out icon'></i>
           <span class="text nav-text">Sair</span>
         </a>
@@ -122,6 +146,6 @@
     </div>
 </section>
 
-<script src="/assets/js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
